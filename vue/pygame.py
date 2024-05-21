@@ -41,11 +41,15 @@ class PygameDisplay(Abstract):
                 elif event.type == pygame.MOUSEBUTTONDOWN:  # Détecter un clic de souris
                     if event.button == 1: 
                         pos_x, pos_y = event.pos
-                        case_x = pos_x // self.cell_size
-                        case_y = pos_y // self.cell_size
-                        if case_x < self.width and case_y < self.height:
+                        
+                        # On check si on est sur le terrain ou sur le panneau de contrôle
+                        if pos_x < self.width * self.cell_size and pos_y < self.height * self.cell_size:
+                            case_x = pos_x // self.cell_size
+                            case_y = pos_y // self.cell_size
                             jeu.set_case(case_x, case_y, True)
                             self.afficher_etat(jeu)
+                        else:
+                            pass
             # Vérifier si la touche Entrée est pressée
             keys = pygame.key.get_pressed()
             if keys[pygame.K_RETURN]: 
