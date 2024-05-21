@@ -9,5 +9,5 @@ class Abstract (abc.ABC):
         pass
 
     @abc.abstractmethod
-    def obtenir_input(self):
+    def obtenir_input(self, jeu):
         pass

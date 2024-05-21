@@ -9,5 +9,5 @@ class VueTextuelle(Abstract):
     def afficher_etat(self, jeu):
         print(jeu)
     
-    def obtenir_input(self):
+    def obtenir_input(self, jeu):
         return input("Appuyez sur une touche pour passer à l'état suivant : ")
