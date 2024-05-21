@@ -5,7 +5,7 @@ from vue.pygame import PygameDisplay
 # Importer le fichier de modèle
 from modele.grille import Grille
 
-jeu = Grille(100, 100)
+jeu = Grille(80, 80)
 
 jeu.set_case(10, 10, True)
 jeu.set_case(10, 11, True)
