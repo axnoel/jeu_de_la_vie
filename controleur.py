@@ -9,11 +9,6 @@ from modele.grille import Grille
 
 jeu = Grille(80, 80)
 
-jeu.set_case(10, 10, True)
-jeu.set_case(10, 11, True)
-jeu.set_case(10, 12, True)
-jeu.set_case(11, 12, True)
-jeu.set_case(12, 11, True)
 
 vue = PygameDisplay(jeu)
 
